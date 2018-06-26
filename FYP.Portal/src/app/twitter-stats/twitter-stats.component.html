@@ -1,0 +1,29 @@
+<div class="row holder" *ngIf="loading" style="position:relative;min-height:440px">
+    <ngx-loading [show]="loading"></ngx-loading>
+</div>
+
+<div class="row holder" [hidden]="!wordData || !wordData.length || loading">
+  <div #title class="col-md-10 offset-md-1 title">Twitter activity for {{artistName}} on {{date | fullDate}}</div>
+
+  <div class="col-lg-10 col-xl-8 offset-xl-2 offset-lg-1 word-cloud-holder" 
+    AgWordCloud #word_cloud_chart=ag-word-cloud 
+    [wordData]="wordData"
+    [options]="wordOptions"
+    [width]="wordCloudWidth"
+    [height]="wordCloudWidth * 0.4">
+  </div>
+
+  <div class="col-md-10 offset-md-1" [ngClass]="{'hide': !(tweets && tweets.length)}">
+    <div class="row flex-row flex-nowrap tweet-container p-2" dragScroll #nav [class.stop-scrolling]="stopScrolling"
+      (mouseover)="stopScrolling = true"
+      (mouseout)="stopScrolling = false">
+      <div *ngFor="let tweet of tweets" class="tweet-parent">
+        <div class="card tweet-holder">
+          <p class="tweet-text">{{tweet.text}}</p>
+          <p class="view-tweet clickable"  (click)="openLink(tweet.link)" *ngIf="tweet.link">CLICK TO VIEW</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

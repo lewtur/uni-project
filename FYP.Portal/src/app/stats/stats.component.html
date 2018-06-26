@@ -1,0 +1,49 @@
+<div class="row content-panel stats-content-panel" style="position:relative;min-height:440px">
+  <ngx-loading [show]="loading"></ngx-loading>
+
+  <div class="col-12 text-center panel-header">ANALYTICS</div>
+
+  <div class="col-lg-10 col-xl-8 offset-xl-2 offset-lg-1" style="display:block;" *ngIf="!loading">
+    <div class="artist-holder">
+      <div class="artist-name">{{artistName}}</div>
+      <span *ngFor="let genre of genreList" class="badge badge-pill mb-2" [style.backgroundColor]="getGenreColor(genre)">{{genre}}</span>                
+    </div>    
+
+    <div class="tip">Click one of the blue twitter dots to see more info about that day</div>
+
+    <canvas baseChart width="800" height="400"
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [chartType]="lineChartType"></canvas>
+
+    <div class="help clickable" (click)="openHelper(chartHelp)">What does this data mean?</div>
+  </div>    
+</div>
+
+<app-twitter-stats [artistName]="artistName" [date]="dateSelected" [loading]="loadingTwitterData"></app-twitter-stats>
+
+<ng-template #chartHelp let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Chart help</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>
+      The green line represents an artists Spotify popularity, which is
+      determined by their number of listens and how close to that date they were.
+    </p>
+    <p>
+      The blue line shows how many people tweeted about an artist on a given day.
+    </p>      
+    <p>
+      Both lines are weighted as a percentage value.
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-light" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>

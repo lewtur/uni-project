@@ -1,0 +1,41 @@
+<div class="row content-panel" style="position:relative;min-height:440px" [class.smaller]="!albumsReleased">
+  <ngx-loading [show]="loading"></ngx-loading>
+
+  <div class="col-12 text-center panel-header">TODAYS RELEASES</div>
+
+  <div class="col-sm-8 offset-sm-2 albums-container" *ngIf="albumsReleased">
+
+    <div class="row flex-row flex-nowrap album-container p-2" dragScroll #nav>
+      <div *ngFor="let album of albums">
+
+            <div class="card" style="width: 10rem">
+              <div class="image-holder clickable" (click)="playAlbum(album)">
+                <img class="card-img-top album-artwork" [src]="album.albumArtworkUrl" alt="Card image cap">
+                <i class="fa fa-play fa-2x" aria-hidden="true"></i>
+              </div>             
+              <p class="artist-name">{{album.artistName}}</p>
+              <p class="album-name">{{album.albumName}}</p>
+              <p class="album-label">{{album.label}}</p>  
+              <div class="row genre-holder" *ngIf="album.genreList">
+                <span *ngFor="let genre of album.genreList" class="col-auto badge badge-pill" [style.backgroundColor]="getGenreColor(genre)">{{genre}}</span>                
+              </div>              
+            </div>          
+        </div>        
+    </div>
+
+    <div class="row pb-4" *ngIf="showCycleButtons">
+      <i class="panel-cycle-button fa fa-angle-left fa-2x m-auto clickable" (click)="moveLeft()" aria-hidden="true"></i>
+      <i class="panel-cycle-button fa fa-angle-right fa-2x m-auto clickable" (click)="moveRight()" aria-hidden="true"></i>
+    </div>
+
+    <div class="row pt-4">
+      <div *ngIf="spotifyAlbumUrl" class="col-12">
+        <iframe [attr.src]="spotifyAlbumUrl | safeUrl" height="100%" width="100%" frameborder="0" allowtransparency="true"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8 offset-sm-2 no-albums-message" *ngIf="!albumsReleased">
+    Looks like nothing got released today, check back tomorrow for the latest music.
+  </div>
+
+</div>

@@ -1,0 +1,45 @@
+
+  <div class="holder h-100">
+
+    <div class="row text-center city-holder" [@fadeOut]="finished">
+      <div class="col-md-5 col-lg-4 offset-md-1 offset-lg-2 choose-your">
+        <div class="swag">Choose your city</div>
+        <div class="more-than-one">You can pick more than one!</div>
+      </div>
+      <div *ngIf="cities" class="col-md-5 col-lg-4">
+        <div class="city-container row">
+
+            <div *ngFor="let city of cities; let i = index"
+              class="col-auto clickable city wow fadeIn"
+              [attr.data-wow-delay]="'1.' + i + 's'"
+              [@oneCitySelected]="city.selected"
+              (click)="selectMenutem(city)">
+                {{city.name}}
+            </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-1 col-lg-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-auto next-button clickable"
+        [@atLeastOneCitySelected]="cityIsSelected"
+        [@fadeOut]="finished"
+        (click)="clickNext()">
+        FINISH
+      </div>
+    </div>
+
+    <div class="finished-message-container text-center row" [@fadeIn]="finished" *ngIf="finished" style="display:flex;">
+      <div class="finished-message-header col-12">Thanks!</div>
+      <div class="finished-message-body col-12">
+        We'll only show you stuff thats happening in your area. You can change this at any time.
+      </div>
+      <div class="finished-message-button">
+        <div class="clickable" (click)="activeModal.close()">EXPLORE</div>
+      </div>
+    </div>
+  </div>
+

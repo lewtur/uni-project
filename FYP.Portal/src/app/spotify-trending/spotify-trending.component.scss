@@ -1,0 +1,62 @@
+@import '../../variables';
+
+* {
+    color: white;
+}
+
+.spotify-trending-holder {
+    background-color: $primary;
+}
+
+.artist-description {
+  overflow: hidden;
+  position: relative; 
+  line-height: 1.5em;  
+
+    &.collapsed {
+        max-height: 10rem;        
+    }    
+}
+
+/deep/ a {
+    color: $secondary;
+}
+
+.artist-name {
+    font-size: 1.4rem;
+    padding-bottom: 0.6rem;
+}
+
+.artist-menu-item {
+    padding: 0.8rem;    
+    border-bottom: 2px $primary solid;
+
+    &.selected {
+        background-color: $secondary!important;
+        border-radius: 8px!important;
+    }
+
+    &:hover:not(.selected) {
+        border-bottom: 2px #cc4218 solid;
+        border-radius: 0;
+    }
+}
+
+.read-more {
+    margin: 1rem auto;
+    padding: 0.4rem;
+    width: 38%;
+    border: 1px solid grey
+}
+
+.read-more-holder {
+    padding: 1rem;
+}
+
+.no-description {
+    font-style: italic;
+}
+
+.spotify-holder {
+    height: 90px; //80px is height of spotify iframe
+}

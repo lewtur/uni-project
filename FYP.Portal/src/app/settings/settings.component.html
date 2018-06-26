@@ -1,0 +1,11 @@
+<div class="settings-container" *ngIf="open" (clickOutside)="clickedOutside($event)">
+  <div class="settings-header">Cities</div>
+  <div class="cities-container row">
+    <div *ngFor="let city of cities" 
+      class="city col-auto clickable" 
+      [class.selected]="city.selected"
+      (click)="selectCity(city)">{{city.name}}</div>
+  </div>
+  <div class="spotify-link">You can <a [href]="linkAccountUrl | safeUrl">link your Spotify account</a> to get custom recommendations
+  for your music</div>
+</div>

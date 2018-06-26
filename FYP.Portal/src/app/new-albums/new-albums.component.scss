@@ -1,0 +1,68 @@
+.album-label {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.card {
+
+  margin-right: 2rem;
+  border: none;
+
+  p {
+    margin: 0!important;
+    white-space: normal;
+  }
+}
+
+.album-container {  
+  overflow: auto;
+  cursor: grab;      
+
+  @media (min-width: 576px) {
+    overflow: hidden!important;
+  }
+
+}
+
+.smaller {
+  min-height: 16rem!important;
+}
+
+.panel-cycle-button {
+  padding: 0.5rem 1rem;
+}
+
+.image-holder {
+  position: relative;
+
+  & .fa {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+  }
+
+  &:hover {
+    .album-artwork {
+      opacity: 0.7;
+    }
+    .fa {
+      opacity: 1;
+    }
+  }
+}
+
+.no-albums-message {
+  color: grey;
+  padding: 0 10%;
+  text-align: center;
+}
+
+.genre-holder {
+  padding-left: 0.8rem;
+}
+
+.badge-pill {
+  margin: 0.2rem;
+}

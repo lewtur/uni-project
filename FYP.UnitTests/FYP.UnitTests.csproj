@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>    
+    <TargetFramework>netcoreapp2.0</TargetFramework>    
+    <PreBuildEvent>(if exist "*old.pdb" del "*old.pdb") &amp; (if exist "*.pdb" ren "*.pdb" *.old.pdb)</PreBuildEvent>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Standard|AnyCPU'" />
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="Moq" Version="4.7.127" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FYP.Data\FYP.Data.csproj" />
+    <ProjectReference Include="..\FYP.External\FYP.External.csproj" />
+    <ProjectReference Include="..\FYP.Main\FYP.Main.csproj" />
+    <ProjectReference Include="..\FYP.Models\FYP.Models.csproj" />
+  </ItemGroup>
+
+</Project>

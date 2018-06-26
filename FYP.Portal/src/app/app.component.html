@@ -1,0 +1,18 @@
+<nav class="navbar bg-primary fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <div class="navbar-title">Project</div>    
+  </a>
+  <i *ngIf="!settingsOpened" class="fa fa-bars menu-button clickable" aria-hidden="true" (click)="settingsOpened = !settingsOpened"></i>
+  <i *ngIf="settingsOpened" class="fa fa-times-circle menu-button clickable" aria-hidden="true" (click)="settingsOpened = !settingsOpened"></i>
+</nav>
+
+<app-settings [(open)]="settingsOpened"></app-settings>
+<app-dashboard></app-dashboard>
+<app-footer></app-footer>
+
+<!-- <div>
+  Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from 
+  <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by 
+  <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+</div> -->

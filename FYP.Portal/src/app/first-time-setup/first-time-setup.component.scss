@@ -1,0 +1,130 @@
+@import '../../variables';
+
+.holder {
+  background-color: $primary;
+  color: white;
+}
+
+.animate-in-first {
+  animation: fadeIn 0.6s ease-in, fadeOut 0.27s ease-in forwards;
+  animation-delay: 0s, 200s;
+}
+
+.logo {
+  position: relative;
+  top: 43%;
+  transform: translateY(-50%);
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.more-than-one {
+  font-size: 0.8rem;
+}
+
+.choose-your {
+  font-size: 4rem;
+  opacity: 0;
+  text-align: right;
+  animation: slideUp 0.4s ease-out forwards;
+  animation-delay: 0.8s;
+
+  div {
+    animation: slideUp 0.4s ease-out forwards;
+    animation-delay: 0.8s;
+  }  
+  
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    padding: 0 2rem;
+    font-size: 3.6rem;
+  }
+}
+
+.city-holder, .finished-message-container {
+  padding-top: 15%;
+
+  @media (max-width: 576px) {
+    padding-top: 0%;
+  }
+}
+
+.city-container {
+  margin-top: 7%;
+  padding: 0 2rem;
+}
+
+.city {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0.2rem;
+  user-select: none;
+  border-radius: 0.8rem;
+}
+
+.next-button {
+  font-size: 0.9rem;
+  padding: 0.6rem 2.3rem;
+  background-color: $secondary;
+  border-radius: 0.8rem;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.finished-message-container {
+  display: none;
+  opacity: 0;
+}
+
+.finished-message-header {
+  font-size: 3rem;
+}
+
+.finished-message-body {
+  padding: 2rem 15%;
+}
+
+.finished-message-button {
+  width: 25%;
+  margin: 3rem auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-45%, -50%);
+    }
+}
+
+@keyframes moveLeft {
+    from { transform: translate(0, -50%); }
+    to { transform: translate(-45%, -50%); }
+}
+
+@keyframes letter {
+    from { width: 0%; }
+    to { width: 100%; }
+}

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Standard|AnyCPU'" />
+
+  <ItemGroup>
+    <Compile Remove="DataSourceUtilities.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FYP.Data\FYP.Data.csproj" />
+    <ProjectReference Include="..\FYP.Models\FYP.Models.csproj" />
+  </ItemGroup>
+
+</Project>

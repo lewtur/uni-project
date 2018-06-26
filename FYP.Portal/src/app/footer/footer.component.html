@@ -1,0 +1,28 @@
+<div class="footer">
+  <div class="clickable d-inline-block" (click)="openModal(policy)">Privacy &amp; Cookie policy</div>
+</div>
+
+<ng-template #policy let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Privacy &amp; Cookie policy</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-header">Cookie Policy</div>
+    <div class="modal-paragraph">
+      We use cookies to remember where you're from, so we can tailor events and suggestions 
+      that are based in your area. If you opt out of cookies for this site, then no biggie, 
+      you'll just have to tell us where you're from each time you visit.
+    </div>
+    <div class="modal-header">Privacy policy</div>
+    <div class="modal-paragraph">
+      We use Google analytics to monitor how users interact with the site, in order to keep 
+      making the site better for users. You can read about 
+      <a href="https://www.google.com/policies/privacy/partners/" target="_blank">how Google uses this data</a>, 
+      or to <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">learn how to opt out</a>
+      of this service.
+    </div>      
+  </div>
+</ng-template>

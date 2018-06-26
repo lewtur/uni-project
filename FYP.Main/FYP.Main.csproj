@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PreBuildEvent>(if exist "$(TargetDir)*old.pdb" del "$(TargetDir)*old.pdb") &amp; (if exist "$(TargetDir)*.pdb" ren "$(TargetDir)*.pdb" *.old.pdb)</PreBuildEvent>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Standard|AnyCPU'" />
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FYP.External\FYP.External.csproj" />
+  </ItemGroup>
+
+</Project>

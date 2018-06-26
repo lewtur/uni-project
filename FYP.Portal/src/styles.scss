@@ -1,0 +1,68 @@
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/ngx-toastr/toastr-bs4-alert';
+
+html * {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icon-header {
+    padding-bottom: 1.5rem;
+}
+
+app-first-time-setup {
+    height: 100%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.loading-spinner-gig {
+    text-align: center;
+    position: relative;
+    transform: translateY(12rem);
+    color: grey;
+    height: 0;
+}
+
+.panel-header {
+    padding: 1rem 0;
+    letter-spacing: 0.5rem;
+}
+
+// modal overrides
+.modal-lg {
+    max-width: 100%!important;
+    height: 100%!important;
+    margin: auto auto;
+}
+
+.modal-content {
+    height: 100%;
+}
+
+.content-panel {
+    padding: 4rem 0;
+}
+
+.badge-pill {
+    color: white;
+    margin: 0 0.2rem;
+}
+
+.toast-close-button {
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+
+.cookie-toast {
+    width: 75%!important;
+
+    a {
+        color: inherit!important;
+        font-weight: bold!important;
+    }
+}

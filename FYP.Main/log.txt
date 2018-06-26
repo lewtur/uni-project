@@ -1,0 +1,188 @@
+2017 October 05
+
+Manchester
+[MOCK] Adding artist Vessels
+[MOCK] Adding event Vessels
+[MOCK] Adding artist Dj Shadow
+[MOCK] Adding event Dj Shadow
+[MOCK] Adding artist Tom Grennan
+[MOCK] Adding event Tom Grennan
+[MOCK] Adding artist Tori Amos
+[MOCK] Adding event Tori Amos
+Birmingham
+[MOCK] Adding artist Chantel McGregor
+[MOCK] Adding event Solid Entertainments Present Chantel McGregor and Ash Wilson
+[MOCK] Adding artist De Beren Gieren
+[MOCK] Adding event De Beren Gieren plus support
+Leeds
+[MOCK] Adding artist Bison Briggz
+[MOCK] Adding artist Raptor Warhurst
+[MOCK] Adding event Tremz Live + Special Guests
+[MOCK] Adding artist The Strawberries
+[MOCK] Adding event Dr. Martens presents: Play Different
+Bristol
+[MOCK] Adding artist New Street Adventure
+[MOCK] Adding artist The Milk
+[MOCK] Adding event The Milk  & New Street Adventure Tour
+[MOCK] Adding artist New Found Glory
+[MOCK] Adding event New Found Glory
+[MOCK] Adding artist GARY NUMAN
+[MOCK] Adding event Gary Numan
+Sheffield
+[MOCK] Adding artist Berlyn Trilogy
+[MOCK] Adding artist Cynthia's Periscope
+[MOCK] Adding artist Eqavox
+[MOCK] Adding event Interference
+Liverpool
+[MOCK] Adding artist Youngblood Brass Band
+[MOCK] Adding event Youngblood Brass Band
+[MOCK] Adding artist HMLTD
+[MOCK] Adding artist Pixx
+[MOCK] Adding event HMLTD, Pixx
+[MOCK] Adding artist Trudy And The Romance
+[MOCK] Adding event Dr. Martens presents: Play Different
+
+2017 October 06
+
+Manchester
+[MOCK] Adding artist Look Mum No Computer
+[MOCK] Adding artist Soccer96
+[MOCK] Adding event Space Cassette
+[MOCK] Adding artist Gas
+[MOCK] Adding artist Herron
+[MOCK] Adding artist Wolfgang Voigt
+[MOCK] Adding event Gas (Live)
+[MOCK] Adding artist Desperate Journalist
+[MOCK] Adding event DESPERATE JOURNALIST
+[MOCK] Adding artist New Street Adventure
+[MOCK] Adding artist The Milk
+[MOCK] Adding event The Milk  & New Street Adventure Tour
+[MOCK] Adding artist Billy Bibby
+[MOCK] Adding event Billy Bibby & the Wry Smiles
+[MOCK] Adding artist Dave Graney and Clare Moore
+[MOCK] Adding artist Poppycock
+[MOCK] Adding artist Uke Punk
+[MOCK] Adding event Dave Graney and Clare Moore
+[MOCK] Adding artist O>L>A
+[MOCK] Adding artist Tindrumm
+[MOCK] Adding event Tindrumm 'Hardly Art' Album Launch
+Birmingham
+[MOCK] Adding artist Shellac
+[MOCK] Adding event This Is Tmrw Presents Shellac 
+[MOCK] Adding artist Squeeze
+[MOCK] Adding event Squeeze
+[MOCK] Adding artist Tom Grennan
+[MOCK] Adding event Tom Grennan
+Leeds
+[MOCK] Adding artist UK Foo Fighters
+[MOCK] Adding event UK Foo Fighters - 10th Anniversary Tour
+[MOCK] Adding artist The Strawberries
+[MOCK] Adding event Dr. Martens presents: Play Different
+[MOCK] Adding artist The Tidy Wives
+[MOCK] Adding event The Tidy WIves
+Bristol
+[MOCK] Adding artist Verb T
+[MOCK] Adding event Bristol Külture presents Verb T & Pitch 92 + Support
+[MOCK] Adding artist Texas
+[MOCK] Adding event Texas
+[MOCK] Adding artist Dj Shadow
+[MOCK] Adding event Dj Shadow
+Sheffield
+[MOCK] Adding artist Anthony Joseph
+[MOCK] Adding event Anthony Joseph
+Liverpool
+[MOCK] Adding artist The Big Moon
+[MOCK] Adding event The Big Moon
+[MOCK] Adding artist Shane Filan
+[MOCK] Adding event Shane Filan - Love Always Tour 2017
+[MOCK] Adding artist Lo Five
+[MOCK] Adding event Krautwerk // Melodien // Lo Five
+[MOCK] Adding artist Trudy And The Romance
+[MOCK] Adding event Dr. Martens presents: Play Different
+
+2017 October 07
+
+Manchester
+[MOCK] Adding artist The Complete Stone Roses
+[MOCK] Adding event The Complete Stone Roses & A Northern Soul - Manchester
+[MOCK] Adding artist 112 (One-Twelve)
+[MOCK] Adding artist dru hill
+[MOCK] Adding artist Ginuwine
+[MOCK] Adding artist Sisqo
+[MOCK] Adding event Dru Hill Live
+[MOCK] Adding artist The Australian Pink Floyd Show
+[MOCK] Adding event The Australian Pink Floyd
+Birmingham
+[MOCK] Adding artist Rhino and the Ranters
+[MOCK] Adding event Hare & Hounds Presents Rhino & Ranters 
+[MOCK] Adding artist Bianca Rose
+[MOCK] Adding event Bianca Rose No Fear Here UK Tour Birmingham
+[MOCK] Adding artist Squeeze
+[MOCK] Adding event Squeeze
+Leeds
+[MOCK] Adding artist Dizzee Rascal
+[MOCK] Adding event Dizzee Rascal
+[MOCK] Adding artist Mali Hayes
+[MOCK] Adding artist The Haggis Horns
+[MOCK] Adding event Soul Rebels 5th Birthday with The Haggis Horns + Mali Hayes
+Bristol
+Sheffield
+[MOCK] Adding artist Afriquoi
+[MOCK] Adding artist Macka B
+[MOCK] Adding event Yellow Arch 20th Birthday feat. Macka B, Afriquoi & many more.
+[MOCK] Adding artist Hannah Peel
+[MOCK] Adding artist HarleyLikesMusic
+[MOCK] Adding event Promenade Cinema @ Devonshire Dome - Sensoria / SynthfestUK
+Liverpool
+[MOCK] Adding artist Elvis tribute
+[MOCK] Adding event The Ultimate Tribute Show to Freddie Mercury & Elvis
+[MOCK] Adding artist Belinda Carlisle
+[MOCK] Adding event Belinda Carlisle
+[MOCK] Adding artist Fenne Lily
+[MOCK] Adding artist Siv Jakobsen
+[MOCK] Adding event Fenne Lily, Paul Thomas Saunders, Siv Jakobsen & Sivu
+
+2017 October 08
+
+Manchester
+[MOCK] Adding artist Bang Bang Romeo
+[MOCK] Adding artist BlackWaters
+[MOCK] Adding artist The Shimmer Band
+[MOCK] Adding event This Feeling Alive Tour
+Birmingham
+[MOCK] Adding artist 112 (One-Twelve)
+[MOCK] Adding artist dru hill
+[MOCK] Adding artist Ginuwine
+[MOCK] Adding artist Sisqo
+[MOCK] Adding event 112 / Dru Hill / Ginuwine 20th Anniversary Tour Birmingham
+[MOCK] Adding artist Bianca Rose
+[MOCK] Adding event Bianca Rose UK Tour Bham
+[MOCK] Adding artist Beverley Knight
+[MOCK] Adding event Beverley Knight
+Leeds
+Bristol
+Sheffield
+Liverpool
+
+2017 October 09
+
+Manchester
+[MOCK] Adding artist Kumiko
+[MOCK] Adding artist LAYFULLSTOP
+[MOCK] Adding event Layfullstop / Ambiere / Kumiko @ SHE
+Birmingham
+[MOCK] Adding artist Hellion Rising
+[MOCK] Adding artist Supersuckers
+[MOCK] Adding event AGMP Present Supersuckers 
+Leeds
+[MOCK] Adding artist Bang Bang Romeo
+[MOCK] Adding artist BlackWaters
+[MOCK] Adding artist The Shimmer Band
+[MOCK] Adding event This Feeling Alive Tour
+Bristol
+[MOCK] Adding artist Hellion Rising
+[MOCK] Adding artist Supersuckers
+[MOCK] Adding event Supersuckers
+Sheffield
+Liverpool
+

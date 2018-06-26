@@ -1,0 +1,40 @@
+<div class="row spotify-trending-holder content-panel" style="position:relative;min-height:440px">
+  <ngx-loading [show]="loading"></ngx-loading>
+
+  <div class="col-12 text-center panel-header">THIS WEEKS TRENDING ARTISTS</div>
+
+  <div class="col-sm-4 col-md-3 offset-lg-1 artist-menu">
+    <div *ngFor="let artist of artists; let i = index" class="artist-menu-item clickable" (click)="selectArtist(i)" [class.selected]="selectedArtist.name === artist.name">
+      {{i+1}}) {{artist.name}}
+    </div>    
+  </div>
+
+  
+  <div class="col-sm-4 col-md-6 col-lg-5 artist-info" *ngIf="selectedArtist">
+    <div class="artist-name">{{selectedArtist.name}}</div>
+    <div class="pb-3">
+      <span *ngFor="let genre of selectedArtist.genreList" class="badge badge-pill" [style.backgroundColor]="getGenreColor(genre)">{{genre}}</span>                
+    </div>
+    <div *ngIf="spotifyUrl" class="spotify-holder">
+      <iframe [attr.src]="spotifyUrl | safeUrl" height="100%" width="100%" frameborder="0" allowtransparency="true"></iframe>
+    </div>    
+    <div *ngIf="selectedArtist.description" class="artist-description" [class.collapsed]="collapsed">
+      <div [innerHTML]="selectedArtist.description | safeHtml"></div>
+    </div>
+    <div *ngIf="selectedArtist.description" class="text-center clickable read-more-holder">
+      <div class="read-more" (click)="collapsed = !collapsed">READ {{collapsed ? 'MORE' : 'LESS'}}</div>
+    </div> 
+    <div *ngIf="!selectedArtist.description" class="no-description">Looks like we don't have any info on this artist, you'll have to have a
+      look yourself!
+    </div>    
+  </div>
+
+  <div class="col-sm-4 col-md-3 col-lg-2" *ngIf="selectedArtist">
+    <img class="card-img-top album-artwork" [src]="selectedArtist.imageUrl | safeUrl" alt="Card image cap">
+  </div>
+
+  <div class="col-lg-6 col-md-9 m-auto pt-4" *ngIf="spotifyUrl">
+    
+  </div>  
+  
+</div>

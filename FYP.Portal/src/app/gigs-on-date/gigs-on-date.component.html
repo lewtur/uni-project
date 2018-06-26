@@ -1,0 +1,46 @@
+<div class="gig-container row content-panel" style="position:relative;min-height:440px">
+
+  <ngx-loading [show]="loading"></ngx-loading>
+
+  <div *ngIf="displayGig" class="col-12">
+    <div class="row text-center panel-header">
+      <div class="col-md-4 col-sm-3 col-2 text-right">
+        <i *ngIf="gigIndex > 0" class="fa fa-angle-left fa-2x clickable" (click)="moveDayBackwards()" aria-hidden="true"></i>
+      </div>      
+      <div class="col-md-4 col-sm-6 col-8 text-center">{{displayGig.eventDate | friendlyDate | uppercase}}</div>
+      <div class="col-md-4 col-sm-3 col-2 text-left">
+        <i *ngIf="gigIndex < maxGigIndex - 1" class="fa fa-angle-right fa-2x clickable" (click)="moveDayForwards()" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="col-lg-6 offset-lg-3 col-sm-8 offset-sm-2">
+      <div class="row">
+
+        <div class="col-12 pb-2">
+          <div class="gig-city">{{displayGig.town | uppercase}}</div>
+          <div class="gig-title">{{displayGig.eventName}}</div>
+          <span *ngFor="let genre of displayGig.artistGenres" class="badge badge-pill mb-2" [style.backgroundColor]="getGenreColor(genre)">{{genre}}</span>                
+          <div class="gig-location">{{displayGig.startTime}} @ {{displayGig.venueName}}</div>
+          <div class="gig-description" [innerHTML]="displayGig.description"></div>
+        </div>
+
+        <div class="col-md-6">
+          <agm-map [latitude]="displayGig.venueLatitude" [longitude]="displayGig.venueLongitude" [zoom]="17">
+            <agm-marker [latitude]="displayGig.venueLatitude" [longitude]="displayGig.venueLongitude">
+            </agm-marker>
+          </agm-map>
+          <div class="map-disclaimer">Location is approximated!</div>
+        </div>
+        <div *ngIf="displayGig.artistSpotifyUrl" class="col-md-6 spotify-frame">
+          <iframe [attr.src]="displayGig.artistSpotifyUrl | safeUrl" height="100%" width="100%" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+
+        <div *ngIf="!displayGig.artistSpotifyUrl" class="col-md-6 no-spotify">
+          We can't find the Spotify link to the artist playing here! 
+          <a [href]="displayGig.artistGoogleLink | safeUrl" target="blank">Google it?</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

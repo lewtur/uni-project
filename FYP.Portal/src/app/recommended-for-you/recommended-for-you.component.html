@@ -1,0 +1,57 @@
+<div class="row content-panel">
+  <div class="col-12 text-center panel-header">JUST FOR YOU</div>
+
+  <div *ngIf="showSpotifyPrompt" class="col-md-10 offset-md-1 alert alert-primary" role="alert">
+    If you want to see personal recommedations, link up your Spotify account by clicking the settings in the top right.
+  </div>
+
+  <div class="col-md-10 offset-md-1">
+    <div class="intro-message">
+      Here we showcase the hottest bands of the 7 days, filtered down to match the music that you love.
+      <span class="more-click clickable" (click)="showMoreMessage = true">Want to know more?</span>
+    </div>
+    <div class="more-info" *ngIf="showMoreMessage">
+      Every time an artist has a spike in activity, we check our database to try and find out why. For example, if an artist released
+      an album on a Thursday, played a gig at The Night Owl in Birmingham on the Friday, then shortly afterwards had a huge
+      spike in activity, then we would consider 'Album on a Thursday', 'The Night Owl', and 'Birmingham' as good features
+      of an up and coming band. What you see below is those bands with the best features of the past 7 days that match the
+      music you listen to.
+      <div>
+        <span class="clickable more-click" (click)="showMoreMessage = false">Hide this message</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-10 offset-md-1">
+    <div *ngIf="artists" class="row flex-row">
+      <div *ngFor="let artist of artists" class="col-auto card reco" (click)="selectArtist(artist)" [ngClass]="{'col-12 selected': artist.selected, 'clickable': !artist.selected}">
+
+        <div class="artist-name">{{artist.artist.name}}</div>
+
+        <div class="row genre-holder">
+          <span *ngFor="let genre of artist.genreList" class="col-auto badge badge-pill mb-2" [style.backgroundColor]="getGenreColor(genre)">{{genre}}</span>
+        </div>
+
+        <div *ngIf="artist.selected" class="artist-info-panel row">
+          <div class="col-md-6">
+            <div *ngFor="let feature of artist.features" class="feature">
+              <span>{{feature.firstHalf}}</span>
+              <strong placement="top" ngbTooltip="Rank #{{feature.rank}} feature">{{feature.secondHalf}}</strong>
+            </div>
+            <div class="pt-3 pb-1">Genres matched with your favourite artists:</div>
+            <div class="row genre-holder">
+              <span *ngFor="let genre of artist.matchedGenres" class="col-auto badge badge-pill mb-2" [style.backgroundColor]="getGenreColor(genre)">{{genre}}</span>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div *ngIf="spotifyUrl">
+              <iframe [attr.src]="spotifyUrl | safeUrl" height="100%" width="100%" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

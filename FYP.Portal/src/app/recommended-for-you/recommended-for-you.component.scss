@@ -1,0 +1,40 @@
+@import '../../variables';
+
+.reco {
+  padding: 1.65rem;
+  border: none;
+  border-radius: 0;
+
+  &:hover {
+      background-color: #d6d6d6;
+  }
+}
+
+.artist-name {
+  font-size: 1.7rem;
+}
+
+.genre-holder {
+  padding-left: 0.8rem;
+}
+
+.more-click {
+    color: #bfbfbf;
+}
+
+.more-info { 
+    padding: 1rem 0;
+}
+
+.intro-message {
+    padding: 1rem 0;
+}
+
+.selected {
+    background-color: $primary!important;
+    color: white;
+}
+
+.artist-info-panel  {
+    padding-top: 1rem;
+}
